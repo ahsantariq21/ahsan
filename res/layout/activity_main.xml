@@ -1,0 +1,166 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Main_Activity_ScrollView"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="vertical" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        
+        android:id="@+id/Main_Activity_RelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_app"
+         >
+
+        <LinearLayout
+            
+            android:id="@+id/AppNameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" >
+
+            <TextView
+                android:id="@+id/AppName_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tripmania"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/White"
+                android:textSize="45sp"
+                android:textStyle="bold|italic" />
+
+                <TextView
+        android:id="@+id/about_head_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_activity_btns_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignRight="@+id/AppNameLayout"
+            android:layout_below="@id/AppNameLayout"
+            android:layout_marginTop="40dp"
+            android:baselineAligned="true"
+            android:orientation="vertical"
+            android:showDividers="middle" >
+
+            <Button
+                android:id="@+id/main_homeId"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/orangebtn"
+                android:onClick="SavedLocation"
+                android:shadowColor="#848483"
+                android:shadowDx="0"
+                android:shadowDy="3"
+                android:shadowRadius="5"
+                android:text="@string/SavedLocations" />
+
+            <Button
+                android:id="@+id/main_currentId"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/seagreenbtn"
+                android:text="@string/Current_Location"
+                android:onClick="checkGPS" />
+
+            <Button
+                android:id="@+id/main_searchId"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/yellowbtn"
+                android:onClick="PopupView"
+                android:text="@string/Search_Location" />
+
+            <Button
+                android:id="@+id/main_aboutId"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/pinkbtn"
+                android:text="@string/About"
+                android:onClick="about" />
+            
+              <Button
+                android:id="@+id/main_changeLang"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/orangebtn"
+                android:onClick="askLang"
+                android:shadowColor="#848483"
+                android:shadowDx="0"
+                android:shadowDy="3"
+                android:shadowRadius="5"
+                android:text="@string/changeLanguage" />
+              
+                <Button
+                android:id="@+id/main_Crash"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/seagreenbtn"
+                android:text="Crash"
+                android:onClick="CrashMyApp" />
+                
+                <Button
+                android:id="@+id/main_Parse_Json"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/seagreenbtn"
+                android:text="Json"
+                android:onClick="Json" />
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_bottom" />
+            
+        </LinearLayout>
+
+     
+         <com.google.android.gms.ads.AdView
+             xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
+        
+      
+
+        <TextView
+            android:id="@+id/mytravelguide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/AppNameLayout"
+            android:layout_below="@+id/AppNameLayout"
+            android:layout_marginRight="22dp"
+            android:text="My Travel Guide"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/lightBlue" />
+		
+    </RelativeLayout>
+</ScrollView>

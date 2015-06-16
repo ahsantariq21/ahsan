@@ -1,0 +1,38 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <color name="Blue">#a97843</color>
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:textColor">@color/Blue</item>
+    </style>
+    
+     <color name="black">#000</color>
+     <color name="Pinky">#ee0049</color>
+     <color name="lightBlue">#79a7ec</color>
+     <color name="blue">#79a7ec</color>
+     <color name="red">#f00</color>
+     
+
+     <style name="styleName" parent="android:Widget.Holo.Light.TextView">
+          <item name="android:layout_marginTop">14dp</item>
+          <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+          <item name="android:textColor">@color/black</item>
+     </style>
+     <color name="White">#FFFF</color>
+     <color name="LightGreen">#53ff4b</color>
+     <color name="Yellow">#ffec4b</color>
+     <color name="SeaBlue">#209eff</color>
+</resources>

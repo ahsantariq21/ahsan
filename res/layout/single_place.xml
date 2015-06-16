@@ -1,0 +1,182 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detailed_info_scrollContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_app"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".ShowCompleteInfo" >
+
+        <LinearLayout
+            android:id="@+id/detail_location_map_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center" >
+
+            <!-- <ImageView
+                android:id="@+id/detailed_location_map"
+                android:layout_width="match_parent"
+                android:layout_height="201dp"
+                android:layout_marginTop="0dp"
+                android:baseline="@dimen/activity_vertical_margin"
+                android:baselineAlignBottom="false"
+                android:scaleType="fitXY"
+                android:src="@drawable/location_map" /> -->
+            <fragment
+		        android:id="@+id/map_single"
+		        android:name="com.google.android.gms.maps.MapFragment"
+		        android:layout_width="match_parent"
+		        android:layout_height="201dp"
+		        android:layout_marginTop="0dp"
+		        android:scaleType="fitXY"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detail_hotel_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/detail_location_map_image"
+            android:layout_marginTop="20dp"
+           
+           
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/info_tags"
+                android:layout_width="wrap_content"
+              
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+			
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/AppsName_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.40"
+                        android:text="Name: "
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/White"
+                        android:textStyle="bold"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/complete_number_heading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Contact #:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/White"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.41"
+                        android:text="Address: "
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/White"
+                        android:textStyle="bold"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/info_values"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp"
+                     >
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Salt n Pepper"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/White"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                      
+                        android:layout_weight="1"
+                        android:text="0423-7676767"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/White"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4.10"
+                        android:text="52-B MM - Alam road, Gulberg, Lahore"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/White"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:id="@+id/logo2"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/logo_bottom" />
+
+                <Button
+                    android:id="@+id/smsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/logo2"
+                    android:layout_toLeftOf="@+id/logo2"
+                    android:text="Send Sms"
+                    android:onClick="sendSMS" />
+
+                <Button
+                    android:id="@+id/emailButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/logo2"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="29dp"
+                    android:text="Send Email"
+                    android:onClick="sendEMAIL" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        
+    </RelativeLayout>
+
+</ScrollView>
